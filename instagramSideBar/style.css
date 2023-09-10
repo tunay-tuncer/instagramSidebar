@@ -1,0 +1,176 @@
+:root{
+    --whiteText: #ffffff;
+    --whiteBackground : #fff;
+
+    --blackText: #000;
+    --blackBackground : #000;
+
+    --borderColor: #dbdbdb;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+}
+
+body{
+    height: 100vh;
+    background: var(--whiteBackground);
+    transition: 0.4s ease;
+}
+
+p{
+    color: var(--blackText);
+}
+
+i{
+    color: var(--blackText);
+}
+
+.mainContainer{
+    position: relative;
+    width: 18%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+    border-right: 1px solid var(--borderColor);
+}
+
+#instaLogo{
+    display: none;
+    height: 40px;
+    font-size: 2rem;
+}
+
+.instaTextLogo{
+    width: 7rem;
+}
+
+.navUl{
+    margin-top: 1rem;
+}
+
+.navUl div{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0.3rem;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.navUl div:hover{
+    background: var(--borderColor);
+}
+
+.navUl div:hover > i{
+    scale: 1.1;
+}
+
+.navUl div p{
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-left: 1rem;
+}
+
+.navUl div i{
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    transition: 0.4s ease;
+}
+
+.profile{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 3rem);
+    height: 3rem;
+    border-radius: 0.3rem;
+    transition: 0.4s ease;
+}
+
+.profile i{
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    transition: 0.4s ease;
+}
+
+.profile p{
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-left: 1rem;
+}
+
+.profile:hover{
+    background: var(--borderColor);
+}
+
+#themeButton{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transform: translate(-50%);
+    font-size: 2rem;
+    width: 3rem;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+}
+
+#themeButton:hover{
+    background: var(--borderColor);
+}
+
+@media (max-width: 1010px){
+    .mainContainer{
+        width: 5rem;
+        padding: 2.5rem 1rem;
+        align-items: center;
+    }
+
+    .instaTextLogo{
+        display: none;
+    }
+
+    #instaLogo{
+        display: block;
+    }
+
+    p{
+        display: none;
+    }
+
+    .navUl{
+        width: 100%;
+    }
+    
+    .navUl div i{
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile{
+        width: calc(100% - 2rem);
+        display: flex;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 1400px){
+    html{
+        font-size: 14px;
+    }
+}
